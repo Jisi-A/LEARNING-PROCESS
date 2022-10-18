@@ -1,0 +1,46 @@
+#include <bits/stdc++.h>
+using namespace std;
+/* Simple calculating program */
+  
+int main() {
+  int N, A;
+  
+  cout << "Please enter number(s) of calculation needed:" ;
+  cin >> N ;
+  cout << "What is the initial value?:" ;
+  cin >> A;
+  
+  for(int i=0; i<N ; i++){
+   
+    int x;
+    string op;
+    
+    cout << "The operation is:" ;
+    cin >> op;
+    cout << "The second number is:" ;
+	cin >> x;
+    
+	if(op == "+"){
+      A += x;}
+    
+	else if(op == "-"){
+      A -= x;
+    }
+    
+	else if(op == "*"){
+      A *= x;
+    }
+   
+    else if(op == "/" && x!=0){
+      A /= x;
+    }
+   
+    else{
+      cout << "error" << endl;
+      break;
+    }
+   
+    cout << i+1 << ":" << A <<endl;
+  }
+  cout << "Calculation done, enjoy!" << endl;
+}
