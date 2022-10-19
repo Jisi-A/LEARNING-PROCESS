@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Assignment
+{public static void main(String[] args)
+    {Scanner sc = new Scanner(System.in);
+     char search;
+     int x;
+     System.out.print("Enter the number of students:");
+     x=sc.nextInt();
+     char grade[] = new char[x];
+     int num=0;
+     for(int i=0;i<grade.length;i++)
+     {System.out.print("Enter the Grade of Students: ");
+      grade[i]=sc.next().charAt(0);
+     }
+     System.out.print("Enter the grade to be searched: ");
+     search=sc.next().charAt(0);
+     for(int i=0;i<grade.length;i++)
+     {if(search==grade[i])
+         {System.out.println("The grade is at Index: "+i);
+          num=num+1;}
+        }
+     if(num>0)
+     {System.out.println("Number of students with grade "+search+" is "+num);
+        }
+     else
+     {System.out.println("There is no student with grade "+search);
+        }
+    }
+}
