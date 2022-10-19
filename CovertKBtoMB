@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class kb_mb 
+{double Convertkbjava(double[] MB)
+   {double max=0;
+    System.out.print("The inputs in Megabyte are");
+    for(int i=0;i<MB.length;i++)
+    {MB[i]=MB[i]/1024;
+     if(MB[i]>max)
+     {max=MB[i];}
+     System.out.print(" "+MB[i]);
+    }
+    return max;
+   }
+ public static void main(String[] args)
+   {Scanner sc=new Scanner(System.in);
+    double []KB=new double[10];
+    System.out.print("Please enter ten inputs in KB: ");
+    for(int i=0;i<KB.length;i++)
+    {KB[i]=sc.nextDouble();}
+    kb_mb obj=new kb_mb();
+    System.out.println("\nThe largest number is "+obj.Convertkbjava(KB));
+   } 
+}
